@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const testimonials = [
   {
+    id: 1,
     content:
       "EduWave transformed my learning experience. The interactive modules and real-time feedback made complex topics much easier to understand.",
     author: "Alex Thompson",
@@ -13,6 +14,7 @@ const testimonials = [
     avatar: "/placeholder.svg",
   },
   {
+    id: 2,
     content:
       "As an instructor, I love how EduWave makes it easy to create engaging content and track student progress. The platform is intuitive and powerful.",
     author: "Dr. Maria Garcia",
@@ -20,6 +22,7 @@ const testimonials = [
     avatar: "/placeholder.svg",
   },
   {
+    id: 3,
     content:
       "The code playground and instant feedback features helped me improve my programming skills significantly. Highly recommended!",
     author: "James Wilson",
@@ -27,6 +30,7 @@ const testimonials = [
     avatar: "/placeholder.svg",
   },
   {
+    id: 4,
     content:
       "EduWave's collaborative features made remote learning feel more connected. The discussion threads and note-sharing are game-changers.",
     author: "Sarah Chen",
@@ -42,11 +46,11 @@ export function Testimonials() {
         align: "start",
         loop: true,
       }}
-      className="mx-auto w-full max-w-5xl"
+      className="w-full"
     >
       <CarouselContent>
-        {testimonials.map((testimonial, index) => (
-          <CarouselItem key={index} className="md:basis-1/2">
+        {testimonials.map((testimonial) => (
+          <CarouselItem key={testimonial.id} className="md:basis-1/2">
             <Card>
               <CardContent className="grid gap-4 p-6">
                 <p className="text-muted-foreground">"{testimonial.content}"</p>

@@ -1,10 +1,10 @@
-import { DashboardHeader } from "@/components/dashboard-header"
-import { DashboardShell } from "@/components/dashboard-shell"
-import { CourseProgress } from "@/components/course-progress"
-import { DeadlinesCard } from "@/components/deadlines-card"
-import { GoalsOverview } from "@/components/goals-overview"
-import { RecentActivity } from "@/components/recent-activity"
-import { StatsCards } from "@/components/stats-cards"
+import { DashboardHeader } from "@/components/dashboard/dashboard-header"
+import { DashboardShell } from "@/components/dashboard/dashboard-shell"
+import { CourseProgress } from "@/components/dashboard/course-progress"
+import { DeadlinesCard } from "@/components/dashboard/deadlines-card"
+import { GoalsOverview } from "@/components/dashboard/goals-overview"
+import { RecentActivity } from "@/components/dashboard/recent-activity"
+import { StatsCards } from "@/components/dashboard/stats-cards"
 
 export default function DashboardPage() {
   return (
