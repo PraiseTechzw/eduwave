@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button"
-import { FeaturedCourses } from "@/components/landing/featured-courses"
-import { Features } from "@/components/landing/features"
-import { Stats } from "@/components/landing/stats"
-import { Testimonials } from "@/components/landing/testimonials"
-import { FAQ } from "@/components/landing/faq"
-import { CtaSection } from "@/components/landing/cta-section"
+import { FeaturedCourses } from "@/components/featured-courses"
+import { Features } from "@/components/features"
+import { Stats } from "@/components/stats"
+import { Testimonials } from "@/components/testimonials"
+import { FAQ } from "@/components/faq"
+import { CtaSection } from "@/components/cta-section"
 import { ArrowRight, PlayCircle } from "lucide-react"
 
 export default function LandingPage() {
