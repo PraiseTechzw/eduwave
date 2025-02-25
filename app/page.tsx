@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button"
-import { FeaturedCourses } from "@/components/featured-courses"
-import { Features } from "@/components/features"
-import { Stats } from "@/components/stats"
-import { Testimonials } from "@/components/testimonials"
-import { FAQ } from "@/components/faq"
-import { CtaSection } from "@/components/cta-section"
+import { FeaturedCourses } from "@/components/landing/featured-courses"
+import { Features } from "@/components/landing/features"
+import { Stats } from "@/components/landing/stats"
+import { Testimonials } from "@/components/landing/testimonials"
+import { FAQ } from "@/components/landing/faq"
+import { CtaSection } from "@/components/landing/cta-section"
 import { ArrowRight, PlayCircle } from "lucide-react"
+import { FadeIn } from "@/components/animations/fade-in"
+import { Float } from "@/components/animations/float"
 
 export default function LandingPage() {
   return (
@@ -14,43 +16,50 @@ export default function LandingPage() {
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10" />
         <div className="container relative flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center gap-8 py-20 text-center">
-          <div className="space-y-4">
-            <div className="mx-auto w-fit rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-foreground">
-              🎓 The Future of Learning
+          <FadeIn>
+            <div className="space-y-4">
+              <div className="mx-auto w-fit rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-foreground">
+                🎓 The Future of Learning
+              </div>
+              <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                Learn Without Limits with <span className="text-primary">EduWave</span>
+              </h1>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
+                Access world-class education from CUT's top instructors. Master new skills at your own pace with
+                interactive learning experiences.
+              </p>
             </div>
-            <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              Learn Without Limits with <span className="text-primary">EduWave</span>
-            </h1>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
-              Access world-class education from CUT's top instructors. Master new skills at your own pace with
-              interactive learning experiences.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" className="h-12 px-8">
-              Get Started Free
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg" className="h-12 px-8">
-              <PlayCircle className="mr-2 h-4 w-4" />
-              Watch Demo
-            </Button>
-          </div>
-          <div className="mt-8 grid gap-4 text-center">
-            <p className="text-sm text-muted-foreground">Trusted by leading universities</p>
-            <div className="flex flex-wrap justify-center gap-8">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <img
-                  key={i}
-                  src="/placeholder.svg"
-                  alt="University logo"
-                  className="h-8 w-auto dark:invert"
-                  width={100}
-                  height={32}
-                />
-              ))}
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button size="lg" className="h-12 px-8">
+                Get Started Free
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="h-12 px-8">
+                <PlayCircle className="mr-2 h-4 w-4" />
+                Watch Demo
+              </Button>
             </div>
-          </div>
+          </FadeIn>
+          <FadeIn delay={0.4}>
+            <div className="mt-8 grid gap-4 text-center">
+              <p className="text-sm text-muted-foreground">Trusted by leading universities</p>
+              <div className="flex flex-wrap justify-center gap-8">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <Float key={i} delay={i * 0.2}>
+                    <img
+                      src="/placeholder.svg"
+                      alt="University logo"
+                      className="h-8 w-auto dark:invert"
+                      width={100}
+                      height={32}
+                    />
+                  </Float>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
